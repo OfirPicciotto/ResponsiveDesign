@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" -->
+    <!-- /> -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Design Live Page</title>
+  </head>
+  <body>
+    <div class="screen" onclick="onToggleMenu()"></div>
+    <header class="main-header">
+      <div class="main-layout flex align-center space-between">
+        <div class="logo">Blogin<span class="dot">.</span></div>
+        <ul class="main-nav flex clean-list">
+          <li onclick="onMenuClick(this)">
+            <a class="flex justify-center align-center selected-link" href="#"
+              >Journal</a
+            >
+          </li>
+          <li onclick="onMenuClick(this)" class="flex justify-center">
+            <a class="flex justify-center align-center" href="#">About</a>
+          </li>
+          <li onclick="onMenuClick(this)" class="flex justify-center">
+            <a class="flex justify-center align-center" href="#">Work</a>
+          </li>
+          <li
+            onclick="onMenuClick(this)"
+            class="flex justify-center selected-li"
+          >
+            <a class="flex justify-center align-center" href="#">Contact</a>
+          </li>
+        </ul>
+        <button class="btn-menu-toggle" onclick="onToggleMenu()">☰</button>
+      </div>
+    </header>
+
+    <main class="main-layout">
+      <div class="card cards-layout">
+        <img src="images/001.jpeg" alt="" class="card-image" />
+        <div class="card-content flex direction-column space-between">
+          <div>
+            <h2 class="card-title">
+              Duis aute irure dolor in henderit in voluptate.
+            </h2>
+            <p class="card-text">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+
+            <p class="card-text">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur...
+            </p>
+          </div>
+          <button class="card-btn">Continue Reading</button>
+        </div>
+      </div>
+      <div class="card cards-layout">
+        <img src="images/002.jpeg" alt="" class="card-image" />
+        <div class="card-content flex direction-column space-between">
+          <div>
+            <h2 class="card-title">
+              Duis aute irure dolor in henderit in voluptate.
+            </h2>
+            <p class="card-text">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+
+            <p class="card-text">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur...
+            </p>
+          </div>
+          <button class="card-btn">Continue Reading</button>
+        </div>
+      </div>
+      <div class="card cards-layout">
+        <img src="images/003.jpeg" alt="" class="card-image" />
+        <div class="card-content flex direction-column space-between">
+          <div>
+            <h2 class="card-title">
+              Duis aute irure dolor in henderit in voluptate.
+            </h2>
+            <p class="card-text">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+
+            <p class="card-text">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur...
+            </p>
+          </div>
+          <button class="card-btn">Continue Reading</button>
+        </div>
+      </div>
+      <div class="pages flex space-between">
+        <a href=""><span>&larr;</span> Previus</a>
+        <a href="">Next <span>&rarr;</span></a>
+      </div>
+    </main>
+    <footer class="flex align-center">
+      <div class="main-layout flex align-center direction-column">
+        <div class="logo">Blogin<span class="dot">.</span></div>
+        <small
+          >© 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+          <span>Pixelhint.com</span></small
+        >
+        <ul class="social-nav flex clean-list space-between">
+          <li class="flex">
+            <a
+              class="flex align-center justify-center fab fa-facebook"
+              href="social-facebook"
+            ></a>
+          </li>
+          <li class="flex">
+            <a
+              class="flex align-center justify-center fab fa-twitter"
+              href="social-twitter"
+            ></a>
+          </li>
+          <li class="flex">
+            <a
+              class="flex align-center justify-center fab fa-behance"
+              href="social-behance"
+            ></a>
+          </li>
+          <li class="flex">
+            <a
+              class="flex align-center justify-center fab fa-dribbble"
+              href="social-dribbble"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      'use strict';
+      function onMenuClick(el) {
+        const elLinks = document.querySelectorAll(
+          '.main-nav li a.selected-link'
+        );
+        elLinks.forEach((link) => {
+          link.classList.remove('selected-link');
+        });
+        el.children[0].classList.add('selected-link');
+      }
+
+      function onToggleMenu() {
+        document.body.classList.toggle('menu-open');
+      }
+    </script>
+  </body>
+</html>
